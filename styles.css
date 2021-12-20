@@ -9,28 +9,5 @@ body{
 h1{
     display: inline-block;
 }
-.container{
-    display: flex;
-}
-.taskCard{
-
-    text-align: center;
-}
-
-button .addTask{
-    float: right;
-}
 
 
-
-div{
-    min-width: 0;
-}
-
-.row{
-    min-width: auto;
-    min-height: auto;
-}
-.row{
-    min-width: auto;
-}
