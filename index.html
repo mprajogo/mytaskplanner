@@ -1,207 +1,196 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Tasks</title>
-  </head>
-  <body>
-
-    <h1>My Tasks</h1>
-    <br>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <title>My Tasks</title>
+    </head>
     
-
-    <!-- Add Task Button  -->
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addTask">
-        Add Task
-      </button>
-      
-      <!-- Add Task Modal -->
-      <div class="modal fade" id="addTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="addTaskLabel">Add Task</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-
-              <!-- Add Task Form Start -->
-              <form>
-                <div class="form-group">
-                  <label for="taskName">Task Name</label>
-                  <input type="text" class="form-control" id="taskName" aria-describedby="name">
-                </div>
-
-                <div class="form-group">
-                  <label for="status">Status</label>
-               <select class="form-control" id="status">
-                        <option selected>Select status</option>
-                      <option>To Do</option>
-                      <option >In Progress</option>
-                      <option >Review</option>
-                      <option >Done</option>
-                 
-                </select>
-                <br>
-                <div class="form-group">
-                    <label for="taskDescription">Task Description</label>
-                    <textarea class="form-control" id="taskDescription" rows="3"></textarea>
-                </div>
-               
-                <div class="form-group">
-                    <label for="assignedTo">Assigned to:</label>
-                    <input type="text" class="form-control" id="assignedTo" aria-describedby="assignedTo">
-                  </div>
-                
-                <div class="form-group">
-                  <label for="dueDate">Due Date: </label>
-
-                  <input type="date" class="form-control" id="dueDate" name="dueDate"
-                         value="yyy-mm-dd"
-                         min="2021-01-01">
-                    </div>
-
-              <br>
-              <button type="reset" class="btn btn-secondary">Reset</button>  
-              <button type="submit" class="btn btn-success">Submit</button>
-                
-              </form>
-              <!-- Add Task Form End -->
-
-            <!-- Add Task Modal Resume -->
-            </div>
-            <div class="modal-footer">
-             
-            </div>
-          </div>
-          <!-- Add TaskModal End -->
-        </div>
-        
-      </div>
-    </div>
-
-    <br>
-<br>
-    <!-- Card start -->
-      <div class="card bg-light mb-3 text-center" style="max-width: 23rem;">
-        <div class="card-header text-primary">STATUS</div>
-        <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">This is where the task description will go.</p>
-          <hr>
-          <div class="row">
-          <div class="col">Assigned to:</div>
-          <div class="col">Due By: </div>
-        </div>
-        <div class="row">
-            <div class="col text-muted">Assignee Name</div>
-            <div class="col text-muted">Due Date</div>
-          </div>
+    <body>
+        <h1>My Tasks</h1>
         <br>
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
-          <button type="submit" class="btn btn-danger">Delete</button>
+
+        <!-- Add Task Button  -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addTask">
+        Add Task
+        </button>
+    
+      <!-- Add Task Modal -->
+        <div class="modal fade" id="addTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addTaskLabel">Add Task</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Add Task Form Start -->
+                        <form>
+                            <div class="form-group">
+                                <label for="taskName">Task Name</label>
+                                <input type="text" class="form-control" id="taskName" aria-describedby="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select class="form-control" id="status">
+                                    <option selected>Select status</option>
+                                    <option>To Do</option>
+                                    <option >In Progress</option>
+                                    <option >Review</option>
+                                    <option >Done</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taskDescription">Task Description</label>
+                                <textarea class="form-control" id="taskDescription" rows="3"></textarea>
+                            </div>
+               
+                            <div class="form-group">
+                                <label for="assignedTo">Assigned to:</label>
+                                <input type="text" class="form-control" id="assignedTo" aria-describedby="assignedTo">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="dueDate">Due Date: </label>
+                                <input type="date" class="form-control" id="dueDate" name="dueDate" value="yyy-mm-dd" min="2021-01-01">
+                            </div>
+
+                            <button type="reset" class="btn btn-secondary">Reset</button>  
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                        <!-- Add Task Form End -->
+                    </div>
+                    <!-- Add Task Modal Resume -->
+                    <div class="modal-footer">
+                    </div>
+                </div>
+                <!-- Add Task Modal End -->
+            </div>
         </div>
+   
+
+        <br>
+        <br>
+        <!-- List Group Start -->
+
+        <!-- Card start -->
+        <div class="card border-secondary mb-3 text-center" style="max-width: 23rem;">
+            <div class="card-header text-primary font-weight-bold">STATUS 
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Task Name</h5>
+                <p class="card-text">This is where the task description will go.</p>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">Assigned to:</div>
+                        <div class="col">Due By: </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-muted">Assignee Name</div>
+                        <div class="col text-muted">Due Date</div>
+                    </div>
+                </div>
+                <br>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
         </div>
-      </div>
+      
 
         <!-- card end -->
         <!-- Card start -->
-        <div class="card bg-light mb-3 text-center" style="max-width: 23rem;">
-            <div class="card-header text-primary">IN PROGRESS</div>
+        <div class="card border-secondary mb-3 text-center" style="max-width: 23rem;">
+            <div class="card-header text-primary font-weight-bold">IN PROGRESS</div>
             <div class="card-body">
-              <h5 class="card-title">Draft Essay</h5>
-              <p class="card-text">Create a 500 word draft of your English assignment.</p>
-              <hr>
-              <div class="row">
-              <div class="col">Assigned to:</div>
-              <div class="col">Due By: </div>
+                <h5 class="card-title">Complete Codecademy Modules</h5>
+                <p class="card-text">Work on any modules and lessons that you have not completed yet.</p>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">Assigned to:</div>
+                        <div class="col">Due By: </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-muted">Michelle</div>
+                        <div class="col text-muted">21-12-2021</div>
+                    </div>
+                </div>
+                <br>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
+                <button type="submit" class="btn btn-danger">Delete</button>
             </div>
-            <div class="row">
-                <div class="col text-muted">Michelle</div>
-                <div class="col text-muted">21-12-2021</div>
-              </div>
-            <br>
-              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
-              <button type="submit" class="btn btn-danger">Delete</button>
-            </div>
-            </div>
-          </div>
+        </div>
+          
     
             <!-- card end -->
-          <div class="modal fade" id="editTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="editTaskLabel">Edit Task</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-    
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editTaskLabel">Edit Task</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
                   <!-- Form Start -->
-                  <form>
-                    <div class="form-group">
-                      <label for="taskName">Task Name</label>
-                      <input type="text" class="form-control" id="taskName" aria-describedby="name">
-                    </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="taskName">Task Name</label>
+                                <input type="text" class="form-control" id="taskName" aria-describedby="name">
+                            </div>
     
-                    <div class="form-group">
-                      <label for="status">Status</label>
-                   <select class="form-control" id="status">
-                            <option selected>Select status</option>
-                          <option>To Do</option>
-                          <option >In Progress</option>
-                          <option >Review</option>
-                          <option >Done</option>
-                     
-                    </select>
-                    <br>
-                    <div class="form-group">
-                        <label for="taskDescription">Task Description</label>
-                        <textarea class="form-control" id="taskDescription" rows="3"></textarea>
-                    </div>
-                   
-                    <div class="form-group">
-                        <label for="assignedTo">Assigned to:</label>
-                        <input type="text" class="form-control" id="assignedTo" aria-describedby="assignedTo">
-                      </div>
-                    
-                    <div class="form-group">
-                      <label for="dueDate">Due Date: </label>
-    
-                      <input type="date" class="form-control" id="dueDate" name="dueDate"
-                             value="yyy-mm-dd"
-                             min="2021-01-01">
-                        </div>
-    
-                  <br>
-                  <button type="reset" class="btn btn-secondary">Reset</button>  
-                  <button type="submit" class="btn btn-success">Submit</button>
-                    
-                  </form>
-                  <!-- Edit Task Form End -->
-    
-                <!-- Edit Task Modal Resume -->
-                </div>
-                <div class="modal-footer">
-                 
-                </div>
-    
-              </div>
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select class="form-control" id="status">
+                                    <option selected>Select status</option>
+                                    <option>To Do</option>
+                                    <option >In Progress</option>
+                                    <option >Review</option>
+                                    <option >Done</option>
+                                </select>
+                            </div>
 
+                            <div class="form-group">
+                                <label for="taskDescription">Task Description</label>
+                                <textarea class="form-control" id="taskDescription" rows="3"></textarea>
+                            </div>
+                   
+                            <div class="form-group">
+                                <label for="assignedTo">Assigned to:</label>
+                                <input type="text" class="form-control" id="assignedTo" aria-describedby="assignedTo">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="dueDate">Due Date: </label>
+                                <input type="date" class="form-control" id="dueDate" name="dueDate" value="yyy-mm-dd" min="2021-01-01">
+                            </div>
+                
+                            
+                    
+                        </form>
+                        <!-- Edit Task Form End -->
+    
+                        <!-- Edit Task Modal Resume -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-secondary">Reset</button>  
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-      
-          
+  
     
 
     <!-- Optional JavaScript -->
