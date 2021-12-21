@@ -12,16 +12,161 @@
     </head>
     
     <body>
-        <h1>My Tasks</h1>
-        <br>
+    <div class="container ">
+        <div class="row justify-content-center" id="headerRow">
+            <h1>My Tasks</h1>
+            <br>
+        </div>
 
-        <!-- Add Task Button  -->
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addTask">
-        Add Task
-        </button>
-    
-      <!-- Add Task Modal -->
-        <div class="modal fade" id="addTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="row justify-content-center h-50" id="btnRow">
+<!-- Add Task Button  -->
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addTask" id="addTaskButton">
+            Add Task
+            </button>
+        
+        </div>    
+        <br>
+        <br>
+        
+<!-- Card start -->
+        <ul class="list-group-flush text-center borderless"">
+            <li class="list-group-item">
+                <div class="card text-center w-50">
+                    <div class="card-header text-primary font-weight-bold">STATUS 
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Task Name</h5>
+                        <p class="card-text">This is where the task description will go.</p>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">Assigned to:</div>
+                                <div class="col">Due By: </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-muted">Assignee Name</div>
+                                <div class="col text-muted">DD-MM-YYYY</div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn btn-outline-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
+                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="card text-center w-50">
+                    <div class="card-header text-primary font-weight-bold">TO DO
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Clean the kitchen</h5>
+                        <p class="card-text">Wipe down the countertops, sweep the floor and wash the dishes before preparing dinner tonight</p>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">Assigned to:</div>
+                                <div class="col">Due By: </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-muted">Michelle</div>
+                                <div class="col text-muted">21-12-2021</div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn btn-outline-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
+                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="card text-center w-50">
+                    <div class="card-header text-primary font-weight-bold">IN PROGRESS 
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Work on Codecademy Modules</h5>
+                        <p class="card-text">Go through any remaining modules and do at least 15 minutes of practice for each topic</p>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">Assigned to:</div>
+                                <div class="col">Due By: </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-muted">Prerna</div>
+                                <div class="col text-muted">24-12-2021</div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn btn-outline-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
+                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="card text-center w-50">
+                    <div class="card-header text-primary font-weight-bold">REVIEW 
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Complete essay draft</h5>
+                        <p class="card-text">Read through essay draft and make any adjustments or improvements based on the marking rubric</p>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">Assigned to:</div>
+                                <div class="col">Due By: </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-muted">Sofia</div>
+                                <div class="col text-muted">22-12-2021</div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn btn-outline-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
+                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                    </div>
+                </div>
+            </li>
+        
+
+            <li class="list-group-item">
+            <div class="card text-center w-50">
+                <div class="card-header text-primary font-weight-bold">DONE</div>
+                <div class="card-body">
+                    <h5 class="card-title">Study for exam</h5>
+                    <p class="card-text">Go through course notes and make flashcards based on any chapter that still needs extra revision</p>
+                    <hr>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">Assigned to:</div>
+                            <div class="col">Due By: </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-muted">Sally</div>
+                            <div class="col text-muted">21-12-2021</div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
+                    <button type="submit" class="btn btn-outline-danger">Delete</button>
+                </div>
+            </div>
+            </li>
+        </ul>
+<!-- Add Task Modal -->
+        <div class="modal fade" id="addTask" tabindex="-1" role="dialog" aria-labelledby="addTaskLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -32,7 +177,7 @@
                     </div>
                     <div class="modal-body">
                         <!-- Add Task Form Start -->
-                        <form>
+                        <form action="" method="" id="addTaskForm">
                             <div class="form-group">
                                 <label for="taskName">Task Name</label>
                                 <input type="text" class="form-control" id="taskName" aria-describedby="name">
@@ -53,7 +198,7 @@
                                 <label for="taskDescription">Task Description</label>
                                 <textarea class="form-control" id="taskDescription" rows="3"></textarea>
                             </div>
-               
+            
                             <div class="form-group">
                                 <label for="assignedTo">Assigned to:</label>
                                 <input type="text" class="form-control" id="assignedTo" aria-describedby="assignedTo">
@@ -65,74 +210,15 @@
                             </div>
 
                             <button type="reset" class="btn btn-secondary">Reset</button>  
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" form="addTaskForm" class="btn btn-success">Submit</button>
                         </form>
-                        <!-- Add Task Form End -->
                     </div>
-                    <!-- Add Task Modal Resume -->
                     <div class="modal-footer">
                     </div>
                 </div>
-                <!-- Add Task Modal End -->
             </div>
         </div>
-   
-
-        <br>
-        <br>
-        <!-- List Group Start -->
-
-        <!-- Card start -->
-        <div class="card border-secondary mb-3 text-center" style="max-width: 23rem;">
-            <div class="card-header text-primary font-weight-bold">STATUS 
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Task Name</h5>
-                <p class="card-text">This is where the task description will go.</p>
-                <hr>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">Assigned to:</div>
-                        <div class="col">Due By: </div>
-                    </div>
-                    <div class="row">
-                        <div class="col text-muted">Assignee Name</div>
-                        <div class="col text-muted">Due Date</div>
-                    </div>
-                </div>
-                <br>
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </div>
-        </div>
-      
-
-        <!-- card end -->
-        <!-- Card start -->
-        <div class="card border-secondary mb-3 text-center" style="max-width: 23rem;">
-            <div class="card-header text-primary font-weight-bold">IN PROGRESS</div>
-            <div class="card-body">
-                <h5 class="card-title">Complete Codecademy Modules</h5>
-                <p class="card-text">Work on any modules and lessons that you have not completed yet.</p>
-                <hr>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">Assigned to:</div>
-                        <div class="col">Due By: </div>
-                    </div>
-                    <div class="row">
-                        <div class="col text-muted">Michelle</div>
-                        <div class="col text-muted">21-12-2021</div>
-                    </div>
-                </div>
-                <br>
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </div>
-        </div>
-          
-    
-            <!-- card end -->
+<!-- Edit Task Modal  -->
         <div class="modal fade" id="editTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -143,8 +229,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                  <!-- Form Start -->
-                        <form>
+                <!-- Form Start -->
+                        <form action="" method="" id="editTaskForm">
                             <div class="form-group">
                                 <label for="taskName">Task Name</label>
                                 <input type="text" class="form-control" id="taskName" aria-describedby="name">
@@ -165,7 +251,7 @@
                                 <label for="taskDescription">Task Description</label>
                                 <textarea class="form-control" id="taskDescription" rows="3"></textarea>
                             </div>
-                   
+                
                             <div class="form-group">
                                 <label for="assignedTo">Assigned to:</label>
                                 <input type="text" class="form-control" id="assignedTo" aria-describedby="assignedTo">
@@ -175,28 +261,22 @@
                                 <label for="dueDate">Due Date: </label>
                                 <input type="date" class="form-control" id="dueDate" name="dueDate" value="yyy-mm-dd" min="2021-01-01">
                             </div>
-                
-                            
-                    
+                        
+                            <button type="reset" class="btn btn-secondary">Reset</button>  
+                            <button type="submit" form="editTaskForm" class="btn btn-success">Submit</button>
                         </form>
-                        <!-- Edit Task Form End -->
-    
-                        <!-- Edit Task Modal Resume -->
                     </div>
                     <div class="modal-footer">
-                        <button type="reset" class="btn btn-secondary">Reset</button>  
-                        <button type="submit" class="btn btn-success">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-  
-    
-
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  
+</body>
 </html>
