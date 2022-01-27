@@ -4,15 +4,19 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>My Tasks</title>
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
-        <title>My Tasks</title>
+
+        <!-- JavaScript Link -->
+        <script src="index.js"></script>
+
     </head>
     
     <body>
-    <div class="container ">
+    <div class="container align-content-center">
         <div class="row justify-content-center" id="headerRow">
             <h1>My Tasks</h1>
             <br>
@@ -29,9 +33,10 @@
         <br>
         
 <!-- Card start -->
+        <div class="col justify-content-center">
         <ul class="list-group-flush text-center borderless"">
             <li class="list-group-item">
-                <div class="card text-center w-50">
+                <div class="card text-center">
                     <div class="card-header text-primary font-weight-bold">STATUS 
                     </div>
                     <div class="card-body">
@@ -58,7 +63,7 @@
             </li>
 
             <li class="list-group-item">
-                <div class="card text-center w-50">
+                <div class="card text-center">
                     <div class="card-header text-primary font-weight-bold">TO DO
                     </div>
                     <div class="card-body">
@@ -85,7 +90,7 @@
             </li>
 
             <li class="list-group-item">
-                <div class="card text-center w-50">
+                <div class="card text-center">
                     <div class="card-header text-primary font-weight-bold">IN PROGRESS 
                     </div>
                     <div class="card-body">
@@ -93,7 +98,7 @@
                         <p class="card-text">Go through any remaining modules and do at least 15 minutes of practice for each topic</p>
                         <hr>
                         <div class="container">
-                            <div class="row">
+                            <div class="row ">
                                 <div class="col">Assigned to:</div>
                                 <div class="col">Due By: </div>
                             </div>
@@ -112,7 +117,7 @@
             </li>
 
             <li class="list-group-item">
-                <div class="card text-center w-50">
+                <div class="card text-center">
                     <div class="card-header text-primary font-weight-bold">REVIEW 
                     </div>
                     <div class="card-body">
@@ -140,7 +145,7 @@
         
 
             <li class="list-group-item">
-            <div class="card text-center w-50">
+            <div class="card text-center">
                 <div class="card-header text-primary font-weight-bold">DONE</div>
                 <div class="card-body">
                     <h5 class="card-title">Study for exam</h5>
@@ -165,6 +170,8 @@
             </div>
             </li>
         </ul>
+    </div>
+
 <!-- Add Task Modal -->
         <div class="modal fade" id="addTask" tabindex="-1" role="dialog" aria-labelledby="addTaskLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -177,7 +184,7 @@
                     </div>
                     <div class="modal-body">
                         <!-- Add Task Form Start -->
-                        <form action="" method="" id="addTaskForm">
+                        <form action="" method="" id="addTaskForm" class="">
                             <div class="form-group">
                                 <label for="taskName">Task Name</label>
                                 <input type="text" class="form-control" id="taskName" aria-describedby="name">
@@ -218,6 +225,7 @@
                 </div>
             </div>
         </div>
+
 <!-- Edit Task Modal  -->
         <div class="modal fade" id="editTask" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
