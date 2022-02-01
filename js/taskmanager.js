@@ -1,4 +1,5 @@
 const createTaskHTML = (
+    id,
     taskName,
     taskDescription,
     assignedTo,
@@ -7,7 +8,7 @@ const createTaskHTML = (
 ) => {
 
     const html = `  
-    <li class="list-group-item">
+    <li class="list-group-item" data-task-id="${id}">
                 <div class="card text-center">
                     <div class="card-header text-primary font-weight-bold">${taskStatus} 
                     </div>
@@ -30,6 +31,7 @@ const createTaskHTML = (
                     <div class="card-footer">
                         <button type="button" class="btn btn btn-outline-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
                         <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        <button type="submit" class="btn btn-outline-primary done-button">Done</button>
                     </div>
                 </div>
             </li>
@@ -40,9 +42,9 @@ const createTaskHTML = (
 
   
 class TaskManager {
-    constructor(currentID = 0) {
+    constructor(currentId = 0) {
         this.tasks = [];
-        this.currentID = currentID;
+        this.currentId = currentId;
     }
 
     addTask(
@@ -64,25 +66,38 @@ class TaskManager {
           this.tasks.push(task);
         }
     
-        render(){
-            let tasksHtmlList = [];
-            for (let i = 0; i < this.tasks.length; i++) {
-                const task = this.tasks[i];
-                const date = new Date(task.dueDate);
-                const formattedDate = date.toDateString();
-                const taskHtml = createTaskHTML(
-                    task.taskName,
-                    task.taskDescription, 
-                    task.assignedTo,
-                    task.dueDate,
-                    task.taskStatus
-                );
-            tasksHtmlList.push(taskHtml);
+    render(){
+        let tasksHtmlList = [];
+        for (let i = 0; i < this.tasks.length; i++) {
+            const task = this.tasks[i];
+            const date = new Date(task.dueDate);
+            const formattedDate = date.toDateString();
+            const taskHtml = createTaskHTML(
+                task.id,
+                task.taskName,
+                task.taskDescription, 
+                task.assignedTo,
+                task.dueDate,
+                task.taskStatus
+            );
+        tasksHtmlList.push(taskHtml);
         }
-            const tasksHtml = tasksHtmlList.join("\n");
-            const tasksList = document.querySelector("#taskList");
-            tasksList.innerHTML = tasksHtml;
-        }
+        const tasksHtml = tasksHtmlList.join("\n");
+        const tasksList = document.querySelector("#taskList");
+        tasksList.innerHTML = tasksHtml;
     }
+    
+    getTaskById(taskId){
+        let foundTask;
+
+        for (let i = 0; i < this.tasks.length; i++) {
+            const task = this.tasks[i];
+            if (task.id === taskId) {
+              foundTask = task;
+            }
+          }
+        return foundTask;
+    }
+}
 
 

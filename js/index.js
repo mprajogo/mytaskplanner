@@ -111,3 +111,20 @@ let dueDateValue = dueDate.value;
 
 });
 
+
+const tasksList = document.querySelector('#taskList');
+tasksList.addEventListener('click', (event) => { 
+  if(event.target.classList.contains('done-button')){
+    const parentTask = event.target.parentElement.parentElement.parentElement;
+    console.log(parentTask);
+    let taskId = parseInt(parentTask.dataset.taskId);
+
+    const task = taskManager.getTaskById(taskId);
+    task.taskStatus = "Done";
+
+    taskManager.render();
+
+  }
+
+  
+});
