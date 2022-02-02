@@ -1,11 +1,17 @@
 const taskManager = new TaskManager(0);
 
+taskManager.load();
+taskManager.render();
+
 // Task 5 - Display Current Date
 const dateElement = document.querySelector('#currentDate');
 const current = new Date();
-let date = `The current date is ${current.getDate()}-${(current.getMonth()+1)}-${current.getFullYear()}`;
-dateElement.innerHTML = date;
+const date = `${current.getDate()}-${(current.getMonth()+1)}-${current.getFullYear()}`
+let currentDate = `The current date is ${date}`;
+dateElement.innerHTML = currentDate;
 
+// Minimum date for input form
+document.getElementsByName("dueDate")[0].setAttribute('min', currentDate);
 
 const form = document.querySelector('#addTaskForm');
 
@@ -105,8 +111,10 @@ let dueDateValue = dueDate.value;
       taskStatusValue
     );
     
-    taskManager.render();
     clearValues();
+    taskManager.save();
+    taskManager.render();
+    
   }
 
 });
@@ -122,9 +130,10 @@ tasksList.addEventListener('click', (event) => {
     const task = taskManager.getTaskById(taskId);
     task.taskStatus = "Done";
 
+    taskManager.save();
     taskManager.render();
 
   }
-
-  
 });
+
+
