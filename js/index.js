@@ -28,10 +28,10 @@ let taskStatusValue = taskStatus.value;
 let assignedToValue = assignedTo.value;
 let dueDateValue = dueDate.value;
 
-  let validationFail = 0;
+let validationFail = 0;
 
-  event.preventDefault();
-  event.stopPropagation();
+event.preventDefault();
+event.stopPropagation();
 
   // Form validation for Task Name Field min length 5
   if (taskNameValue.length >= 5) {
@@ -117,6 +117,8 @@ let dueDateValue = dueDate.value;
     
   }
 
+  $('#addTask').modal('toggle');
+    return false;
 });
 
 
