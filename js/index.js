@@ -6,9 +6,8 @@ taskManager.render();
 // Task 5 - Display Current Date
 const dateElement = document.querySelector('#currentDate');
 const current = new Date();
-const date = `${current.getDate()}-${(current.getMonth()+1)}-${current.getFullYear()}`
-let currentDate = `The current date is ${date}`;
-dateElement.innerHTML = currentDate;
+let date = `The current date is ${current.getDate()}-${(current.getMonth()+1)}-${current.getFullYear()}`;
+dateElement.innerHTML = date;
 
 // Minimum date for input form
 document.getElementsByName("dueDate")[0].setAttribute('min', currentDate);
