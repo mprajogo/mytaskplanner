@@ -1,4 +1,3 @@
-alert('if you can see this alert, your js files are correctly linked');
 
 const createTaskHTML = (
     id,
