@@ -30,7 +30,7 @@ const createTaskHTML = (
                     </div>
                     <div class="card-footer">
                         <button type="button" class="btn btn btn-outline-secondary" data-toggle="modal" data-target="#editTask">Edit</button>  
-                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                        <button type="submit" class="btn btn-outline-danger delete-button">Delete</button>
                         <button type="submit" class="btn btn-outline-primary done-button">Done</button>
                     </div>
                 </div>
@@ -118,6 +118,18 @@ class TaskManager {
             let currentId = localStorage.getItem("currentId");
             this.currentId = parseInt(currentId);
         }
+    }
+
+    deleteTask(taskId){
+        let newTasks = [];
+
+        for (let i = 0; i < this.tasks.length; i++) {
+            let task = this.tasks[i];
+            if (task.id != taskId){
+                newTasks.push(task);
+            }
+        }
+        this.tasks = newTasks;
     }
 }
 
