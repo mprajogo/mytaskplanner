@@ -1,5 +1,5 @@
 const taskManager = new TaskManager(0);
-
+alert('test');
 taskManager.load();
 taskManager.render();
 
