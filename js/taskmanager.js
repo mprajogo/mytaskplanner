@@ -1,3 +1,5 @@
+alert('test');
+
 const createTaskHTML = (
     id,
     taskName,
